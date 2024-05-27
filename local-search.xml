@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>Tomcat报错</title>
+    <link href="/2024/05/27/Tomcat%E6%8A%A5%E9%94%99/"/>
+    <url>/2024/05/27/Tomcat%E6%8A%A5%E9%94%99/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>概览：本篇将持续记录运行Tomcat时候遇到过的报错和解决方案</p></blockquote><h2 id="在-WebServlet-中的格式不对"><a href="#在-WebServlet-中的格式不对" class="headerlink" title="在@WebServlet()中的格式不对"></a>在@WebServlet()中的格式不对</h2><p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240527145744978.png" alt="image-20240527145744978">  </p><p>如图报错，很有可能是因为缺少”&#x2F;“引起的  </p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>使用图床管理图片</title>
     <link href="/2024/05/27/%E4%BD%BF%E7%94%A8%E5%9B%BE%E5%BA%8A%E7%AE%A1%E7%90%86%E5%9B%BE%E7%89%87/"/>
     <url>/2024/05/27/%E4%BD%BF%E7%94%A8%E5%9B%BE%E5%BA%8A%E7%AE%A1%E7%90%86%E5%9B%BE%E7%89%87/</url>
