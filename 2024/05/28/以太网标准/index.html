@@ -1,0 +1,769 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/logo.png">
+  <link rel="icon" href="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="xT">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="概述：本篇详解了各类以太网标准  以太网标准体系截止到现在IEEE802.3工作组总共定义了标准以太网、快速以太网、千兆以太网、万兆以太网、新型以太网五大以太网标准体系。这些标准最明显的区别就是速率不同。   IEEE802.3标准为采用不同传输介质的标准以太网制定对应标准，主要包括采用细同轴电缆的10BASE-2、采用粗同轴电缆的10BASE-5和采用双绞线的10BASE-T； IEEE802">
+<meta property="og:type" content="article">
+<meta property="og:title" content="以太网标准">
+<meta property="og:url" content="http://xtpaistar.com/2024/05/28/%E4%BB%A5%E5%A4%AA%E7%BD%91%E6%A0%87%E5%87%86/index.html">
+<meta property="og:site_name" content="派小星&#39;s Home">
+<meta property="og:description" content="概述：本篇详解了各类以太网标准  以太网标准体系截止到现在IEEE802.3工作组总共定义了标准以太网、快速以太网、千兆以太网、万兆以太网、新型以太网五大以太网标准体系。这些标准最明显的区别就是速率不同。   IEEE802.3标准为采用不同传输介质的标准以太网制定对应标准，主要包括采用细同轴电缆的10BASE-2、采用粗同轴电缆的10BASE-5和采用双绞线的10BASE-T； IEEE802">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-05-28T01:36:12.832Z">
+<meta property="article:modified_time" content="2024-05-28T01:48:14.114Z">
+<meta property="article:author" content="xT">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>以太网标准 - 派小星&#39;s Home</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"xtpaistar.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>小派同学的日记</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>主页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>总览</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/bac.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="以太网标准"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-05-28 09:36" pubdate>
+          May 28, 2024 am
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          6.7k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          57 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">以太网标准</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p>概述：本篇详解了各类以太网标准</p>
+</blockquote>
+<h2 id="以太网标准体系"><a href="#以太网标准体系" class="headerlink" title="以太网标准体系"></a>以太网标准体系</h2><p>截止到现在IEEE802.3工作组总共定义了标准以太网、快速以太网、千兆以太网、万兆以太网、新型以太网五大以太网标准体系。这些标准最明显的区别就是速率不同。 </p>
+<ul>
+<li>IEEE802.3标准为采用不同传输介质的标准以太网制定对应标准，主要包括采用细同轴电缆的10BASE-2、采用粗同轴电缆的10BASE-5和采用双绞线的10BASE-T；</li>
+<li>IEEE802.3u标准为采用不同传输介质的快速以太网制定相应规范，包括采用双绞线介质的100BASE-Tx和100BASE-T4，采用多模光纤介质的100BASE-Fx以及10&#x2F;100M速率自协商功能；</li>
+<li>IEEE802.3z和IEEE802.3ab标准定义了采用光纤为传输介质的1000BASE-SX&#x2F;LX以及采用双绞线介质的1000BASE-T规范；</li>
+<li>IEEE802.3ae标准定义了万兆以太网的特点：光纤传输、全双工模式，不再使用半双工和CSMA&#x2F;CD介质访问控制技术，采用局域网和广域网两种物理模型，将以太网技术引入到广域网中；</li>
+<li>IEEE802.3ba标准同时包含40Gbps与100Gbps两种速率接口。该标准解决了数据中心、运营商网络和其他流量密集的高性能计算环境，以及日益增长的应用对带宽的需求。</li>
+</ul>
+<p>以太网实现了网络上无线电系统多个节点发送信息的想法，每个节点必须获取电缆或者信道的才能传送信息，有时也叫作以太（Ether）（这个名字来源于19世纪的物理学家假设的电磁辐射媒体-光以太。后来的研究证明光以太不存在）。 每一个节点有全球唯一的48位地址也就是制造商分配给网卡的MAC地址，以保证以太网上所有节点能互相鉴别。由于以太网十分普遍，许多制造商把以太网卡直接集成进计算机主板。  </p>
+<p>以太网上的计算机任何时候都可以发送信息，但发送之前都需先检测网络是否空闲，即“<strong>侦听”</strong>，如果某时刻有两个或者更多的分组发生冲突，则检测到冲突，欲发送数据的计算机就都需等待一段时间，即“<strong>回退</strong>”，各个计算机的回退时间<strong>随机</strong>产生，一般情况下都不相同。回退时间过后各计算机再次试图发送。这就是以太网技术必须提到的 <strong>CSMA</strong>&#x2F;CD（载波侦听多路访问&#x2F;冲突检测）机制。</p>
+<h4 id="标准名字构成"><a href="#标准名字构成" class="headerlink" title="标准名字构成"></a>标准名字构成</h4><ul>
+<li><strong>10&#x2F;100&#x2F;1000</strong>：表示网线设计的频率，单位MHz。值越大，网线所支持的速度就越快。100 MHz表示以每秒100Mbit的速度传输，这在理论上指的就是12.5 MB&#x2F;s。当然，实际应用中考虑到冗余设计和干扰等因素，真实值可能会小很多。</li>
+<li><strong>BASE</strong>：BASE是英文BASEband的缩写，指的就是基带。表示没有使用频分复用或者其它频率转换技术，每一个信号在一个单一频率上完全控制线缆</li>
+<li><strong>数字&#x2F;T&#x2F;F&#x2F;C等</strong>：最后一个如果是数字，则表示单段网线的最大长度（基准单位是100m）；如果是字母，则依次解释如下：T代表承载信号的物理介质是双绞线缆（Twisted Pair Cable，又分为UTP（Unshielded Twisted Pair，非屏蔽双绞线）和STP（Shielded Twicted Pair，屏蔽双绞线）两种），在这里每一对传送信号的双绞线互相缠绕以减少电磁干扰和串扰；F表示光纤；</li>
+<li><strong>最后的字母或数字（4&#x2F;X等）</strong>： 在同一种传送速率下有多种不同的标准，它们之间以一个字母或数字跟随T&#x2F;F&#x2F;C之后的方式来区隔（例如TX）。它显示了网线的结构并指出包含的绞线对的数量。某些高速标准使用同轴电缆，则分配代号为CX。</li>
+</ul>
+<h2 id="原始以太网：1Mbps以太网"><a href="#原始以太网：1Mbps以太网" class="headerlink" title="原始以太网：1Mbps以太网"></a>原始以太网：1Mbps以太网</h2><ul>
+<li><strong>1BASE5</strong>：也称为星型局域网，速率是1Mbit&#x2F;s。在商业上很失败，但同时也是双绞线的第一次使用；</li>
+</ul>
+<h2 id="标准以太网：10Mbps以太网"><a href="#标准以太网：10Mbps以太网" class="headerlink" title="标准以太网：10Mbps以太网"></a>标准以太网：10Mbps以太网</h2><p>最开始以太网只有10Mbps的吞吐量，它所使用的是CSMA&#x2F;CD（带有冲突检测的载波侦听多路访问）的访问控制方法，通常把这种最早期的10Mbps以太网称之为标准以太网。以太网主要有两种传输介质，那就是双绞线和同轴电缆。所有的以太网都遵循IEEE 802.3标准。</p>
+<h3 id="10BASE-5"><a href="#10BASE-5" class="headerlink" title="10BASE-5"></a>10BASE-5</h3><ul>
+<li>10BASE-5解释：10指的是其10Mbit&#x2F;s的传输速度，BASE是基带信号的缩写（与宽带相反），5代表最大段长度为500米（1600英尺）；</li>
+<li>10BASE-5也被称为Thick Ethernet or Thicknet，是以太网的第一个商用变体；</li>
+<li>使用直径10mm的50欧姆粗同轴电缆（Coaxial Cable），总线拓扑结构，站点网卡的接口为DB-15连接器，每个网段允许有100个站点，每个网段最大允许距离为500m，网络直径为2500m，可由5个500m长的网段和4个中继器组成；</li>
+<li>利用基带的10M传输速率，采用曼彻斯特编码传输数据；</li>
+<li>现在这一标准实际上被10BASE2取代；</li>
+</ul>
+<h3 id="10BASE-2"><a href="#10BASE-2" class="headerlink" title="10BASE-2"></a>10BASE-2</h3><ul>
+<li>10BASE-2解释：10表示10 Mbit&#x2F;s的传输速度，BASE代表基带信令，2代表最大段长度接近200米（实际最大长度为185米）；</li>
+<li>10BASE-2也被称为Cheapernet，Thin Ethernet，Thinnet或者Thinwire，是为了降低10BASE-5的安装成本和复杂性而设计的，使用以BNC连接器端接的同轴电缆；</li>
+<li>其使用廉价的R9-58型50欧姆细同轴电缆，总线拓扑结构；每个网段允许30个站点，每个网段最大允许距离为185m，仍保持10BASE-5的4中继器&#x2F;5网段设计能力，允许的最大网络直径为5x185&#x3D;925m。</li>
+<li>利用基带的10M传输速率，采用曼彻斯特编码传输数据；</li>
+<li>10BASE-2虽然在能力、规格上不及10BASE5，但是因为其线材较细、布线方便、成本也便宜，所以得到更广泛的使用，淘汰了10BASE5。由于双绞线的普及，它也被各式的双绞线网络取代；</li>
+</ul>
+<h3 id="10BASE-T"><a href="#10BASE-T" class="headerlink" title="10BASE-T"></a>10BASE-T</h3><ul>
+<li>10BASE- T解释：10表示10Mbit&#x2F;s的传输速度，BASE表示使用基带传输，T表示双绞线（Twisted pair cables），每个信号的一对导线绞合在一起以减少对之间的电磁干扰和串扰；</li>
+<li>对于相同传输速度有几种标准的情况下，它们通过T之后的字母或数字来区分，例如TX，指的是编码方法和通道数量。</li>
+<li>使用两对非屏蔽双绞线，一对线发送数据，另一对线接收数据，用RJ-45模块作为端接器，星形拓扑结构，信号频率为20MHz，最大距离为100m；</li>
+<li>双绞线以太网是以太网技术的主要进步之一，此前的以太网都是使用同轴电缆，自此以后，双绞线正式取代同轴电缆走上了历史舞台。10BASE-T因为价格便宜、配置灵活和易于管理而流行起来，现在占整个以太网销售量的90%以上。</li>
+</ul>
+<h3 id="10BASE-F"><a href="#10BASE-F" class="headerlink" title="10BASE-F"></a>10BASE-F</h3><ul>
+<li>10BASE- T解释：10表示10Mbit&#x2F;s的传输速度，BASE表示使用基带传输，F表示光纤，使用双工光缆，一条光缆用于发送数据，另一条用于接收；</li>
+<li>分为FP、FB 、FL三种链接类型，FP使用无源集线器连接，传输距离500米。FB使用有源连接器，传输距离2000米。FL可以使用多个中继器，可以进一步延长器传输距离；</li>
+</ul>
+<h4 id="10BASE-FP"><a href="#10BASE-FP" class="headerlink" title="10BASE-FP"></a>10BASE-FP</h4><ul>
+<li>P为Passive的缩写，用来说明点对点的连接方式，一个网段的长度可达500m；</li>
+<li>一个光缆无源星形耦合器最多可连接33台计算机。这形成了一个以信号耦合器为中心的星型网络；</li>
+<li>没有已知的设备实现了这个标准；</li>
+</ul>
+<h4 id="10BASE-FB"><a href="#10BASE-FB" class="headerlink" title="10BASE-FB"></a>10BASE-FB</h4><ul>
+<li>B为Backbone的缩写，是用来说明一个同步信令骨干网段，用于在一个跨越远距离的转发主干网系统中将专用的10BASE-FB同步信令中继器连接在一起。单个10BASE-FB网段最长可达2000m；</li>
+<li>它不用于连接用户工作站。而是用于提供一个同步的信令骨干网，该网允许附加网段和中继器连接到网络上；</li>
+</ul>
+<h4 id="10BASE-FL"><a href="#10BASE-FL" class="headerlink" title="10BASE-FL"></a>10BASE-FL</h4><ul>
+<li>L是Link的缩写，10BASE-FL是以太网光纤上最常用的10BASE-F规范；</li>
+<li>10BASE-FL是路由器之间用光纤连接构成的以太网。最初在DIX规范中称为 FOIRL ，但由 IEE标准化后称为10BASE-FL。支持可达4km的光缆主干以10Mbit&#x2F;s的速度传输；</li>
+<li>如今，10BASE-FL很少用于网络，并已被快速以太网，千兆以太网和100千兆位以太网标准所取代；</li>
+</ul>
+<h2 id="快速以太网：100Mbps以太网"><a href="#快速以太网：100Mbps以太网" class="headerlink" title="快速以太网：100Mbps以太网"></a>快速以太网：100Mbps以太网</h2><p>100Mbps以太网就是业内常说的快速以太网，它由 IEEE 802.3u 标准定义，基本与标准以太网相同，但速度比标准以太网快十倍。快速以太网的速度是通过提高时钟频率和使用不同的编码方式获得的。其传输方案最常用的便是100BASE-T，100BASE-T又包括100BASE-TX 、100BASE-T4以及其他几种。100BASE-T4 是一种 3 类双绞线方案，不支持全双工，目前最广泛使用的都是100BASE-TX，此方案需使用 5 类以上双绞线，时钟信号处理速率高达125MHz。</p>
+<h3 id="100BASE-T"><a href="#100BASE-T" class="headerlink" title="100BASE-T"></a>100BASE-T</h3><ul>
+<li>又称Fast Ethernet（快速以太网），是许多以标称速率100 Mbit&#x2F;s传输流量的以太网标准的统称。在快速以太网标准中，100BASE-TX是最常见的。</li>
+<li>名称中的“100”是指100Mbit&#x2F;s的传输速度，“BASE”是指基带信令，破折号后面的字母T是指承载信号的物理介质为双绞线。快速以太网有时被称为100BASE-X，其中“X”是FX和TX变体的占位符；</li>
+</ul>
+<h4 id="100BASE-T4"><a href="#100BASE-T4" class="headerlink" title="100BASE-T4"></a>100BASE-T4</h4><ul>
+<li>100BASE-T4是快速以太网的早期实现。使用的是四对双绞线，一对保留用于发送，一个用于接收，其余两个将通过协商切换方向；</li>
+<li>使用RJ-45连接器，最大网段长度为100m，并且在节点间的最小长度是2.5米；</li>
+<li>采用EIA568布线标准。由于没有专用的发送或接收线路，所以100BASE-T4不能进行全双工操作；</li>
+<li>在传输中采用8B&#x2F;6T的编码方式，即每8位作为一组的数据转换为每6位一组的三元码组，每条输出信道的信息传输率为33.3Mbps*6&#x2F;8&#x3D;25Mbaud；</li>
+<li>100BASE-T4未被广泛采用，但为其开发的技术被用于1000BASE-T；</li>
+</ul>
+<h4 id="100BASE-TX"><a href="#100BASE-TX" class="headerlink" title="100BASE-TX"></a>100BASE-TX</h4><ul>
+<li>使用两对5类非屏蔽双绞线或1类屏蔽双绞线，一对用于发送数据，另一对用于接收数据；</li>
+<li>最大网段长度为100m，布线符合EIA568标准；</li>
+<li>采用的是4B&#x2F;5B编码方式，即把每4位数据用5位的编码组来表示，该编码方式的码元利用率&#x3D;4&#x2F;5*100%&#x3D;80%。然后将4B&#x2F;5B编码成NRZI进行传输，使其可以125MHz的串行数据流来传送数据；</li>
+<li>100BASE-TX采用的物理拓扑结构为星型，在目前的组网方法中，使用最多的是- 100BASE-TX标准的网卡，只支持RJ-45标准，它多用于主干网；</li>
+<li>支持全双工，使用MLT-3（多电平传输-3）波形法来降低信号频率到125&#x2F;3&#x3D;41.6MHz；</li>
+<li>100BASE-TX是100BASE-T中使用最为广泛的物理层规范；</li>
+</ul>
+<h4 id="100BASE-T2"><a href="#100BASE-T2" class="headerlink" title="100BASE-T2"></a>100BASE-T2</h4><ul>
+<li>随着数字信号处理技术和集成电路技术的发展，只用2对3类UTP线就可以传送100Mbps的数据，因而针对100BASE-T4不能实现全双工的缺点，IEEE开始制定100BASE-T2标准；</li>
+<li>100BASE-T2 采用2对音频或数据级3、4或5类UTP电缆，一对用于发送数据，另一对用于接收数据，可实现全双工操作；采用RJ45连接器，最长网段为100m，符合EIA568布线标准；</li>
+<li>采用名为PAM5x5的5电平编码方案；</li>
+</ul>
+<h4 id="100BASE-T1"><a href="#100BASE-T1" class="headerlink" title="100BASE-T1"></a>100BASE-T1</h4><ul>
+<li>100BASE-T1是IEEE专门针对100Mb&#x2F;s汽车以太网的规范，也可以将其称为IEEE802.3bw，这两个名称指的是相同的规范。“-T1”后缀是一个重要的区别，让您知道是指汽车以太网，它与普通100BASE-T不同；</li>
+<li>100BASE-T1规范可与OPEN Alliance BroadR-Reach互操作，它们几乎相同（名称通常可互换使用），但有两个的小的差异，第一在物理层电气（物理介质附件PMA）测试规范中，100BASE-T1规范定义了发送端最大峰值差分输出的测试，BroadR-Reach规范中未明确定义此参数。第二个差异是100BASE-T1规范在唤醒命令的协议时序上存在一些差异，以使这些时段更短；</li>
+<li>它仅支持全双工，同时在两个方向上传输；</li>
+<li>双绞线电缆需要支持66 MHz，最大长度为15米；</li>
+<li>没有定义特定的连接器；</li>
+</ul>
+<h3 id="100BASE-X"><a href="#100BASE-X" class="headerlink" title="100BASE-X"></a>100BASE-X</h3><ul>
+<li>最新的IEEE Std 802.3™-2015的SECTION 2 的Clause 24 规定了一系列100 Mb&#x2F;s物理层实现共同使用的物理编码子层（PCS）和物理媒体附加（PMA）子层，统称为100BASE-X；</li>
+<li>目前在这个系列中有两个实施例：100BASE-TX和100BASE-FX。100BASE-TX指定通过两对双绞线5类电缆进行操作，100BASE-FX指定通过两根光纤进行操作；</li>
+</ul>
+<h3 id="100BASE-FX"><a href="#100BASE-FX" class="headerlink" title="100BASE-FX"></a>100BASE-FX</h3><ul>
+<li>100BASE-FX是光纤上的快速以太网版本。使用两股光纤，一股用于发送数据，另一股用于接收数据。可用单模光纤或者多模光纤。在全双工情况下，单模光纤的最大传输距离是40千米，多模光纤的最大传输距离是2千米；</li>
+<li>100BASE-FX使用与100BASE-TX相同的4B5B编码和NRZI线路代码；</li>
+<li>100BASE-FX运行于光缆上，使得它非常适合于高速主干网和长距离传输、或有强电气干扰的环境、或要求较高安全保密链接的环境；</li>
+</ul>
+<h2 id="千兆以太网：1Gbps以太网"><a href="#千兆以太网：1Gbps以太网" class="headerlink" title="千兆以太网：1Gbps以太网"></a>千兆以太网：1Gbps以太网</h2><p>千兆以太网标准IEEE 802.3ｚ于1998年6月获得批准，它为三种传输媒质定义了三种收发器：1000BASE-LX用于安装单模光纤，1000BASE-SX用于安装多模光纤，1000BASE-CX用于平衡、屏蔽铜缆，可以用于机房内设备的互连。IEEE 802.3ab定义了在5类线的基础上运行千兆以太网1000BASE-T的物理层，并在1999年6月得到批准。</p>
+<h3 id="1000BASE-X"><a href="#1000BASE-X" class="headerlink" title="1000BASE-X"></a>1000BASE-X</h3><ul>
+<li>IEEE802.3z定义了基于光纤和短距离铜缆的1000BASE-X；</li>
+<li>采用8B&#x2F;10B编码技术，信道传输速度为1.25Gbit&#x2F;s，去耦后实现1000Mbit&#x2F;s传输速度；</li>
+</ul>
+<h3 id="1000BASE-CX"><a href="#1000BASE-CX" class="headerlink" title="1000BASE-CX"></a>1000BASE-CX</h3><ul>
+<li>采用的是150Ω平衡屏蔽双绞线（STP），使用9芯D型连接器连接电缆；</li>
+<li>采用8B&#x2F;10B编码方式，最大传输距离25米；</li>
+<li>适用于交换机之间的连接，尤其适用于主干交换机和主服务器之间的短距离连接；</li>
+</ul>
+<h3 id="1000BASE-LX"><a href="#1000BASE-LX" class="headerlink" title="1000BASE-LX"></a>1000BASE-LX</h3><ul>
+<li>1000BASE-LX采用单模或多模长波激光器（long wavelength laser）的规格。</li>
+<li>采用直径为9um或10um的单模光纤，工作波长范围为1270-1355nm，传输距离为5km左右。</li>
+<li>采用直径为62.5um或50um的多模光纤时，工作波长范围为1270-1355nm，传输距离为550m；</li>
+</ul>
+<h3 id="1000BASE-SX"><a href="#1000BASE-SX" class="headerlink" title="1000BASE-SX"></a>1000BASE-SX</h3><ul>
+<li>1000BASE-X 采用多模短波激光器（short wave-length laser）的规格；</li>
+<li>只支持多模光纤，可以采用直径为62.5um或50um的多模光纤，工作波长为770-860nm，传输距离为220-550m；</li>
+</ul>
+<h3 id="1000BASE-T"><a href="#1000BASE-T" class="headerlink" title="1000BASE-T"></a>1000BASE-T</h3><ul>
+<li>采用四对五类平衡电缆的1000 Mb&#x2F;s物理层规格。与10BASE-T、100BASE-T完全兼容；</li>
+<li>千兆以太网可以在下列四种媒质上运行：单模光纤，最大连接距离至少可达5公里；多模光纤，最大连接距离至少550米；同轴电缆，最大连接距离至少25米；超五类&#x2F;六类线，最大连接距离为100米；</li>
+</ul>
+<h2 id="万兆以太网：10Gbps以太网"><a href="#万兆以太网：10Gbps以太网" class="headerlink" title="万兆以太网：10Gbps以太网"></a>万兆以太网：10Gbps以太网</h2><p>10G以太网于2002年7月在IEEE通过。10G以太网包括10GBASE-X、10GBASE-R和10GBASE-W。</p>
+<ul>
+<li>10GBASE-X使用一种特紧凑包装，含有1个较简单的WDM器件、4个接收器和4个在1300nm波长附近以大约25nm为间隔工作的激光器，每一对发送器&#x2F;接收器在3.125Gbit&#x2F;s速度（数据流速度为2.5Gbit&#x2F;s）下工作；</li>
+<li>10GBASE-R是一种使用64B&#x2F;66B编码（不是在千兆以太网中所用的8B&#x2F;10B）的串行接口，数据流为10.000Gbit&#x2F;s，因而产生的时钟速率为10.3Gbit&#x2F;s；</li>
+<li>10GBASE-W是广域网接口，与SONET OC-192兼容，其时钟为9.953Gbit&#x2F;s数据流为9.585Gbit&#x2F;s；</li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>以太网标准</div>
+      <div>http://xtpaistar.com/2024/05/28/以太网标准/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>xT</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>May 28, 2024</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/05/28/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%8F%8AMAC%E8%A1%A8/" title="交换机工作原理及MAC表">
+                        <span class="hidden-mobile">交换机工作原理及MAC表</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>2024</span> <i class="iconfont icon-love"></i> <i class="iconfont icon-love"></i> <i class="iconfont icon-love"></i> <span>xt</span> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>

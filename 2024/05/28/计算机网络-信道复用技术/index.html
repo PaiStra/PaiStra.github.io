@@ -16,25 +16,29 @@
   <meta name="author" content="xT">
   <meta name="keywords" content="">
   
-    <meta name="description" content="概览：本篇将持续记录运行Tomcat时候遇到过的报错和解决方案  在@WebServlet()中的格式不对   如图报错，很有可能是因为缺少”&#x2F;“引起的">
+    <meta name="description" content="概览：本篇讲述了信道复用技术（频分，时分，波分，码分）  复用和多址的区别复用针对资源（传输），多址针对用户（接入）    复用，将一个物理信道根据时间、频率、空间等资源划分为多个虚拟信道。   一、减少管道的个数，为运营商减少线路成本；   二、提升单通道的容量   多址，“在同一个基站下，不同的用户利用相同的资源（同一时间，同一频率）发出通信请求肯定会发生冲突”，多址用来解决这个问题，如何划">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Tomcat报错">
-<meta property="og:url" content="http://xtpaistar.com/2024/05/27/Tomcat%E6%8A%A5%E9%94%99/index.html">
+<meta property="og:title" content="计算机网络 信道复用技术">
+<meta property="og:url" content="http://xtpaistar.com/2024/05/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E4%BF%A1%E9%81%93%E5%A4%8D%E7%94%A8%E6%8A%80%E6%9C%AF/index.html">
 <meta property="og:site_name" content="派小星&#39;s Home">
-<meta property="og:description" content="概览：本篇将持续记录运行Tomcat时候遇到过的报错和解决方案  在@WebServlet()中的格式不对   如图报错，很有可能是因为缺少”&#x2F;“引起的">
+<meta property="og:description" content="概览：本篇讲述了信道复用技术（频分，时分，波分，码分）  复用和多址的区别复用针对资源（传输），多址针对用户（接入）    复用，将一个物理信道根据时间、频率、空间等资源划分为多个虚拟信道。   一、减少管道的个数，为运营商减少线路成本；   二、提升单通道的容量   多址，“在同一个基站下，不同的用户利用相同的资源（同一时间，同一频率）发出通信请求肯定会发生冲突”，多址用来解决这个问题，如何划">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240527145744978.png">
-<meta property="article:published_time" content="2024-05-27T06:56:53.488Z">
-<meta property="article:modified_time" content="2024-05-27T06:59:30.050Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240528083112168.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/20200511215520923.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/2020051220313312.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240528083343858.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240528085429822.png">
+<meta property="article:published_time" content="2024-05-28T00:25:22.322Z">
+<meta property="article:modified_time" content="2024-05-28T00:57:13.076Z">
 <meta property="article:author" content="xT">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240527145744978.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240528083112168.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Tomcat报错 - 派小星&#39;s Home</title>
+  <title>计算机网络 信道复用技术 - 派小星&#39;s Home</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +204,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Tomcat报错"></span>
+            <span id="subtitle" data-typed-text="计算机网络 信道复用技术"></span>
           
         </div>
 
@@ -211,8 +215,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-05-27 14:56" pubdate>
-          May 27, 2024 pm
+        <time datetime="2024-05-28 08:25" pubdate>
+          May 28, 2024 am
         </time>
       </span>
     
@@ -223,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          76 words
+          996 words
         
       </span>
     
@@ -234,7 +238,7 @@
         
         
         
-          1 mins
+          9 mins
         
       </span>
     
@@ -271,16 +275,34 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Tomcat报错</h1>
+            <h1 id="seo-header">计算机网络 信道复用技术</h1>
             
             
               <div class="markdown-body">
                 
                 <blockquote>
-<p>概览：本篇将持续记录运行Tomcat时候遇到过的报错和解决方案</p>
+<p>概览：本篇讲述了信道复用技术（频分，时分，波分，码分）</p>
 </blockquote>
-<h2 id="在-WebServlet-中的格式不对"><a href="#在-WebServlet-中的格式不对" class="headerlink" title="在@WebServlet()中的格式不对"></a>在@WebServlet()中的格式不对</h2><p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240527145744978.png" srcset="/img/loading.gif" lazyload alt="image-20240527145744978">  </p>
-<p>如图报错，很有可能是因为缺少”&#x2F;“引起的  </p>
+<h2 id="复用和多址的区别"><a href="#复用和多址的区别" class="headerlink" title="复用和多址的区别"></a>复用和多址的区别</h2><p>复用针对资源（传输），多址针对用户（接入）   </p>
+<p><strong>复用</strong>，将一个物理<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E4%BF%A1%E9%81%93&spm=1001.2101.3001.7020">信道</a>根据时间、频率、空间等资源划分为多个虚拟信道。  </p>
+<p>一、减少管道的个数，为运营商减少线路成本；  </p>
+<p>二、提升单通道的容量  </p>
+<p><strong>多址</strong>，“在同一个基站下，不同的用户利用相同的资源（同一时间，同一频率）发出通信请求肯定会发生冲突”，多址用来解决这个问题，如何划分资源块，使更多的用户终端能够在不发生冲突的情况下获得服务  </p>
+<p><strong>举例</strong>，将10MHz的频率资源，划分成5个2MHz，作为子信道，这种做法，叫复用。5个的用户使用这些子信道，每个子信道变成了用户的“址”，这叫多址。  </p>
+<h2 id="频分复用（FDM）-FDMA频分多址"><a href="#频分复用（FDM）-FDMA频分多址" class="headerlink" title="频分复用（FDM）-FDMA频分多址"></a>频分复用（FDM）-FDMA频分多址</h2><p>目的在于提高频带利用率  </p>
+<p>原因：在通信系统中，信道能提供的带宽比传送一路信号需要的带宽宽的多，所以一个信道只传输一路信号是非常浪费的  </p>
+<p>原理：不同用户分别用不同频段跟同时基站通信，因为接收端可以放大特定频段的信号，也就是可以将其他信号剔除  </p>
+<p>举例：在8：00时，A，B，C三人都要向外打电话，移动公司为了节省带宽，采用频分复用技术，讲A,B,C三人的信号频率，通过调制技术，调到不同的频段（要加上防护频带 ，以防止邻路信号间相互干扰),合并后的复用信号，原则上可以在信道中传输，但有时为了更好地利用信道的传输特性，还可以再进行一次调制。在接收端，可利用相应的带通滤波器(BPF)来区分开各路信号的频谱。然后，再通过各自的相干解调器便可恢复各路调制信号。在接收端，可利用相应的带通滤波器(BPF)来区分开各路信号的频谱。然后，再通过各自的相干解调器便可恢复各路调制信号。  </p>
+<p>优缺点：频分复用系统的最大优点是信道复用率高，容许复用的路数多，分路也很方便。因此，它成为目前模拟通信中最主要的一种复用方式。特别是在有线和微波通信系统中应用十分广泛。频分复用系统的主要缺点是设备生产比较复杂，会因滤波器件特性不够理想和信道内存在非线性而产生路间干扰。  </p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240528083112168.png" srcset="/img/loading.gif" lazyload alt="image-20240528083112168"></p>
+<h2 id="时分复用（TDM）"><a href="#时分复用（TDM）" class="headerlink" title="时分复用（TDM）"></a>时分复用（TDM）</h2><p>就是首先需要同步，大家公用一个时间基准，比如把每秒分为十份，每份0.1秒，这就是十个时隙，每个时隙只给一个用户使用，所以不同用户依次跟基站通信，也就没有了干扰。  </p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/20200511215520923.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述">  </p>
+<h2 id="码分复用（CDM）"><a href="#码分复用（CDM）" class="headerlink" title="码分复用（CDM）"></a>码分复用（CDM）</h2><p>就是不同用户在不同的编码方式下实现通信  </p>
+<p> 实际上就是用户用密钥去接收自己的那一段数据，数据还是同一份数据，不同的密钥能解出不同的内容</p>
+<p>码分多址例子：<img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/2020051220313312.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述">  </p>
+<p>举例：</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240528083343858.png" srcset="/img/loading.gif" lazyload alt="image-20240528083343858"></p>
+<h2 id="波分复用（WDM）"><a href="#波分复用（WDM）" class="headerlink" title="波分复用（WDM）"></a>波分复用（WDM）</h2><p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240528085429822.png" srcset="/img/loading.gif" lazyload alt="image-20240528085429822">  </p>
 
                 
               </div>
@@ -298,8 +320,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Tomcat报错</div>
-      <div>http://xtpaistar.com/2024/05/27/Tomcat报错/</div>
+      <div>计算机网络 信道复用技术</div>
+      <div>http://xtpaistar.com/2024/05/28/计算机网络-信道复用技术/</div>
     </div>
     <div class="license-meta">
       
@@ -311,7 +333,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>May 27, 2024</div>
+          <div>May 28, 2024</div>
         </div>
       
       
@@ -343,9 +365,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/05/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E4%BF%A1%E9%81%93%E5%A4%8D%E7%94%A8%E6%8A%80%E6%9C%AF/" title="计算机网络 信道复用技术">
+                      <a href="/2024/05/28/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%8F%8AMAC%E8%A1%A8/" title="交换机工作原理及MAC表">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">计算机网络 信道复用技术</span>
+                        <span class="hidden-mobile">交换机工作原理及MAC表</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -353,8 +375,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/05/27/%E4%BD%BF%E7%94%A8%E5%9B%BE%E5%BA%8A%E7%AE%A1%E7%90%86%E5%9B%BE%E7%89%87/" title="使用图床管理图片">
-                        <span class="hidden-mobile">使用图床管理图片</span>
+                      <a href="/2024/05/27/Tomcat%E6%8A%A5%E9%94%99/" title="Tomcat报错">
+                        <span class="hidden-mobile">Tomcat报错</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
