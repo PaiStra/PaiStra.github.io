@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>关于使用servlet和jsp配置javaweb的一些体会</title>
+    <link href="/2024/05/29/%E5%85%B3%E4%BA%8E%E4%BD%BF%E7%94%A8servlet%E5%92%8Cjsp%E9%85%8D%E7%BD%AEjavaweb%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BD%93%E4%BC%9A/"/>
+    <url>/2024/05/29/%E5%85%B3%E4%BA%8E%E4%BD%BF%E7%94%A8servlet%E5%92%8Cjsp%E9%85%8D%E7%BD%AEjavaweb%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BD%93%E4%BC%9A/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>概述：本篇介绍了在使用时候遇到的一些问题和细节</p></blockquote><h2 id="统筹规划"><a href="#统筹规划" class="headerlink" title="统筹规划"></a>统筹规划</h2><p>应该先分析系统中需要用到的功能  </p><p>如果给出了web前端页面，应该根据前端给出的逻辑给予实现  </p><ol><li>先分析数据库职能，把实体类创建好</li><li>再分析系统功能要素，把功能和实体类之间建立联系，然后写出基本的dao层代码，<strong>先写主要的，可以不全写完</strong></li><li>分析前端页面，根据前端页面，先创建好对应的servlet</li><li>根据servlet来写要实现的功能，每个功能属于业务逻辑层，也就是service层，service层中再调用dao层的基础性代码来综合实现业务</li></ol><h2 id="测试的重要性"><a href="#测试的重要性" class="headerlink" title="测试的重要性"></a>测试的重要性</h2><p>假设给业务开发分流程，其实可以分为先开发数据库，再开发前端，然后开发后端  </p><p>那么必须要完成一个大模块或者小模块后及时进行测试，以免后续模块间的耦合度增高后debug难度增大  </p><p>比方说dao层写完后，一定要进行一下测试，这样可以避免很多的麻烦和焦虑</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>以太网标准</title>
     <link href="/2024/05/28/%E4%BB%A5%E5%A4%AA%E7%BD%91%E6%A0%87%E5%87%86/"/>
     <url>/2024/05/28/%E4%BB%A5%E5%A4%AA%E7%BD%91%E6%A0%87%E5%87%86/</url>
