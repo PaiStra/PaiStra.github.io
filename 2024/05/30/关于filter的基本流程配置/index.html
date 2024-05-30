@@ -16,15 +16,15 @@
   <meta name="author" content="xT">
   <meta name="keywords" content="">
   
-    <meta name="description" content="概述：本篇介绍了在使用时候遇到的一些问题和细节  统筹规划应该先分析系统中需要用到的功能   如果给出了web前端页面，应该根据前端给出的逻辑给予实现    先分析数据库职能，把实体类创建好 再分析系统功能要素，把功能和实体类之间建立联系，然后写出基本的dao层代码，先写主要的，可以不全写完 分析前端页面，根据前端页面，先创建好对应的servlet 根据servlet来写要实现的功能，每个功能属">
+    <meta name="description" content="概述：本篇记录了配置过滤器的基本流程  注解配置1@WebFilter(&quot;&#x2F;*&quot;)  使用注解来配置过滤器   1public class MainFilter extends HttpFilter&amp;#123;&amp;#125;  继承HttpFilter   1234@Override    protected void doFilter(HttpServletRequest r">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于使用servlet和jsp配置javaweb的一些体会">
-<meta property="og:url" content="http://xtpaistar.com/2024/05/29/%E5%85%B3%E4%BA%8E%E4%BD%BF%E7%94%A8servlet%E5%92%8Cjsp%E9%85%8D%E7%BD%AEjavaweb%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BD%93%E4%BC%9A/index.html">
+<meta property="og:title" content="关于filter的基本流程配置">
+<meta property="og:url" content="http://xtpaistar.com/2024/05/30/%E5%85%B3%E4%BA%8Efilter%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="派小星&#39;s Home">
-<meta property="og:description" content="概述：本篇介绍了在使用时候遇到的一些问题和细节  统筹规划应该先分析系统中需要用到的功能   如果给出了web前端页面，应该根据前端给出的逻辑给予实现    先分析数据库职能，把实体类创建好 再分析系统功能要素，把功能和实体类之间建立联系，然后写出基本的dao层代码，先写主要的，可以不全写完 分析前端页面，根据前端页面，先创建好对应的servlet 根据servlet来写要实现的功能，每个功能属">
+<meta property="og:description" content="概述：本篇记录了配置过滤器的基本流程  注解配置1@WebFilter(&quot;&#x2F;*&quot;)  使用注解来配置过滤器   1public class MainFilter extends HttpFilter&amp;#123;&amp;#125;  继承HttpFilter   1234@Override    protected void doFilter(HttpServletRequest r">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-05-29T12:28:01.664Z">
-<meta property="article:modified_time" content="2024-05-29T12:37:51.598Z">
+<meta property="article:published_time" content="2024-05-30T03:12:46.900Z">
+<meta property="article:modified_time" content="2024-05-30T03:16:19.432Z">
 <meta property="article:author" content="xT">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -32,7 +32,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>关于使用servlet和jsp配置javaweb的一些体会 - 派小星&#39;s Home</title>
+  <title>关于filter的基本流程配置 - 派小星&#39;s Home</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="关于使用servlet和jsp配置javaweb的一些体会"></span>
+            <span id="subtitle" data-typed-text="关于filter的基本流程配置"></span>
           
         </div>
 
@@ -209,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-05-29 20:28" pubdate>
-          May 29, 2024 pm
+        <time datetime="2024-05-30 11:12" pubdate>
+          May 30, 2024 am
         </time>
       </span>
     
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          360 words
+          932 words
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          4 mins
+          8 mins
         
       </span>
     
@@ -269,25 +269,34 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">关于使用servlet和jsp配置javaweb的一些体会</h1>
+            <h1 id="seo-header">关于filter的基本流程配置</h1>
             
             
               <div class="markdown-body">
                 
                 <blockquote>
-<p>概述：本篇介绍了在使用时候遇到的一些问题和细节</p>
+<p>概述：本篇记录了配置过滤器的基本流程</p>
 </blockquote>
-<h2 id="统筹规划"><a href="#统筹规划" class="headerlink" title="统筹规划"></a>统筹规划</h2><p>应该先分析系统中需要用到的功能  </p>
-<p>如果给出了web前端页面，应该根据前端给出的逻辑给予实现  </p>
-<ol>
-<li>先分析数据库职能，把实体类创建好</li>
-<li>再分析系统功能要素，把功能和实体类之间建立联系，然后写出基本的dao层代码，<strong>先写主要的，可以不全写完</strong></li>
-<li>分析前端页面，根据前端页面，先创建好对应的servlet</li>
-<li>根据servlet来写要实现的功能，每个功能属于业务逻辑层，也就是service层，service层中再调用dao层的基础性代码来综合实现业务</li>
-</ol>
-<h2 id="测试的重要性"><a href="#测试的重要性" class="headerlink" title="测试的重要性"></a>测试的重要性</h2><p>假设给业务开发分流程，其实可以分为先开发数据库，再开发前端，然后开发后端  </p>
-<p>那么必须要完成一个大模块或者小模块后及时进行测试，以免后续模块间的耦合度增高后debug难度增大  </p>
-<p>比方说dao层写完后，一定要进行一下测试，这样可以避免很多的麻烦和焦虑</p>
+<h2 id="注解配置"><a href="#注解配置" class="headerlink" title="注解配置"></a>注解配置</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@WebFilter(&quot;/*&quot;)</span><br></code></pre></td></tr></table></figure>
+
+<p>使用注解来配置过滤器  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MainFilter</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">HttpFilter</span>&#123;&#125;<br></code></pre></td></tr></table></figure>
+
+<p>继承HttpFilter  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">doFilter</span><span class="hljs-params">(HttpServletRequest req, HttpServletResponse res, FilterChain chain)</span> <span class="hljs-keyword">throws</span> IOException, ServletException &#123;<br>        <br>    &#125;<br></code></pre></td></tr></table></figure>
+
+<p>重写doFilter方法来使用过滤器  </p>
+<h2 id="解决编码乱码问题"><a href="#解决编码乱码问题" class="headerlink" title="解决编码乱码问题"></a>解决编码乱码问题</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">req.setCharacterEncoding(<span class="hljs-string">&quot;UTF-8&quot;</span>);<br>res.setCharacterEncoding(<span class="hljs-string">&quot;UTF-8&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<p>通过设置编码格式来解决传输过程中的乱码问题  </p>
+<h2 id="配置过滤地址"><a href="#配置过滤地址" class="headerlink" title="配置过滤地址"></a>配置过滤地址</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">url</span> <span class="hljs-operator">=</span> req.getRequestURL().toString();<br></code></pre></td></tr></table></figure>
+
+<p>获取url  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">if</span>(!url.endsWith(<span class="hljs-string">&quot;login&quot;</span>) &amp;&amp; !url.endsWith(<span class="hljs-string">&quot;index.jsp&quot;</span>) &amp;&amp; !url.endsWith(<span class="hljs-string">&quot;/&quot;</span>))&#123;<br>            <span class="hljs-type">HttpSession</span> <span class="hljs-variable">session</span> <span class="hljs-operator">=</span> req.getSession();<br>            <span class="hljs-type">String</span> <span class="hljs-variable">user</span> <span class="hljs-operator">=</span> (String)session.getAttribute(<span class="hljs-string">&quot;user&quot;</span>);<br>            <span class="hljs-keyword">if</span>(user == <span class="hljs-literal">null</span>)&#123;<br>                req.setAttribute(<span class="hljs-string">&quot;message&quot;</span>,<span class="hljs-string">&quot;您尚未登录，请登录&quot;</span>);<br>                req.getRequestDispatcher(<span class="hljs-string">&quot;/login.jsp&quot;</span>).forward(req,res);<br>                <span class="hljs-keyword">return</span>;<br>            &#125;<br>        &#125;<br></code></pre></td></tr></table></figure>
+
+<p>通过判断url或者uri中包含的地址要素来决定是否过滤 </p>
+<p>过滤器获取的attribute应该要在<strong>会话域</strong>才行  </p>
+<p>所以在loginservlet中判断的时候需要把属性配置在会话域  </p>
 
                 
               </div>
@@ -305,8 +314,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>关于使用servlet和jsp配置javaweb的一些体会</div>
-      <div>http://xtpaistar.com/2024/05/29/关于使用servlet和jsp配置javaweb的一些体会/</div>
+      <div>关于filter的基本流程配置</div>
+      <div>http://xtpaistar.com/2024/05/30/关于filter的基本流程配置/</div>
     </div>
     <div class="license-meta">
       
@@ -318,7 +327,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>May 29, 2024</div>
+          <div>May 30, 2024</div>
         </div>
       
       
@@ -350,18 +359,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/05/30/%E5%85%B3%E4%BA%8Efilter%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B%E9%85%8D%E7%BD%AE/" title="关于filter的基本流程配置">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">关于filter的基本流程配置</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/05/28/%E4%BB%A5%E5%A4%AA%E7%BD%91%E6%A0%87%E5%87%86/" title="以太网标准">
-                        <span class="hidden-mobile">以太网标准</span>
+                      <a href="/2024/05/29/%E5%85%B3%E4%BA%8E%E4%BD%BF%E7%94%A8servlet%E5%92%8Cjsp%E9%85%8D%E7%BD%AEjavaweb%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BD%93%E4%BC%9A/" title="关于使用servlet和jsp配置javaweb的一些体会">
+                        <span class="hidden-mobile">关于使用servlet和jsp配置javaweb的一些体会</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
