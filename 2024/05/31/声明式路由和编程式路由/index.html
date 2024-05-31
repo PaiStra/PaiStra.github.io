@@ -16,15 +16,15 @@
   <meta name="author" content="xT">
   <meta name="keywords" content="">
   
-    <meta name="description" content="概述：本篇记录了配置过滤器的基本流程  注解配置1@WebFilter(&quot;&#x2F;*&quot;)  使用注解来配置过滤器   1public class MainFilter extends HttpFilter&amp;#123;&amp;#125;  继承HttpFilter   1234@Override    protected void doFilter(HttpServletRequest r">
+    <meta name="description" content="title； vue配置路由的两种方式 概述：本篇记录了配置声明式路由和编程式路由的方法  声明式路由 在src下创建routers包来存放router  &#x2F;* 导入创建路由的相关方法 *&#x2F; import &amp;#123; createRouter, createWebHashHistory &amp;#125; from &#39;vue-router&#39;  &#x2F;*暴露路由*&#x2F; export defa">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于filter的基本流程配置">
-<meta property="og:url" content="http://xtpaistar.com/2024/05/30/%E5%85%B3%E4%BA%8Efilter%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:title" content="派小星&#39;s Home">
+<meta property="og:url" content="http://xtpaistar.com/2024/05/31/%E5%A3%B0%E6%98%8E%E5%BC%8F%E8%B7%AF%E7%94%B1%E5%92%8C%E7%BC%96%E7%A8%8B%E5%BC%8F%E8%B7%AF%E7%94%B1/index.html">
 <meta property="og:site_name" content="派小星&#39;s Home">
-<meta property="og:description" content="概述：本篇记录了配置过滤器的基本流程  注解配置1@WebFilter(&quot;&#x2F;*&quot;)  使用注解来配置过滤器   1public class MainFilter extends HttpFilter&amp;#123;&amp;#125;  继承HttpFilter   1234@Override    protected void doFilter(HttpServletRequest r">
+<meta property="og:description" content="title； vue配置路由的两种方式 概述：本篇记录了配置声明式路由和编程式路由的方法  声明式路由 在src下创建routers包来存放router  &#x2F;* 导入创建路由的相关方法 *&#x2F; import &amp;#123; createRouter, createWebHashHistory &amp;#125; from &#39;vue-router&#39;  &#x2F;*暴露路由*&#x2F; export defa">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-05-30T03:12:46.900Z">
-<meta property="article:modified_time" content="2024-05-30T03:16:19.432Z">
+<meta property="article:published_time" content="2024-05-31T10:04:02.932Z">
+<meta property="article:modified_time" content="2024-05-31T10:15:53.830Z">
 <meta property="article:author" content="xT">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -32,7 +32,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>关于filter的基本流程配置 - 派小星&#39;s Home</title>
+  <title>派小星&#39;s Home</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="关于filter的基本流程配置"></span>
+            <span id="subtitle" data-typed-text=""></span>
           
         </div>
 
@@ -209,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-05-30 11:12" pubdate>
-          May 30, 2024 am
+        <time datetime="2024-05-31 18:04" pubdate>
+          May 31, 2024 pm
         </time>
       </span>
     
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          932 words
+          1.3k words
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          8 mins
+          11 mins
         
       </span>
     
@@ -269,34 +269,60 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">关于filter的基本流程配置</h1>
+            <h1 id="seo-header"></h1>
             
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>概述：本篇记录了配置过滤器的基本流程</p>
+                <hr>
+<h2 id="title；-vue配置路由的两种方式"><a href="#title；-vue配置路由的两种方式" class="headerlink" title="title； vue配置路由的两种方式"></a>title； vue配置路由的两种方式</h2><blockquote>
+<p>概述：本篇记录了配置声明式路由和编程式路由的方法</p>
 </blockquote>
-<h2 id="注解配置"><a href="#注解配置" class="headerlink" title="注解配置"></a>注解配置</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@WebFilter(&quot;/*&quot;)</span><br></code></pre></td></tr></table></figure>
+<h2 id="声明式路由"><a href="#声明式路由" class="headerlink" title="声明式路由"></a>声明式路由</h2><ol>
+<li><p>在src下创建routers包来存放router</p>
+</li>
+<li><pre><code class="js">/* 导入创建路由的相关方法 */
+import &#123; createRouter, createWebHashHistory &#125; from &#39;vue-router&#39;
 
-<p>使用注解来配置过滤器  </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MainFilter</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">HttpFilter</span>&#123;&#125;<br></code></pre></td></tr></table></figure>
-
-<p>继承HttpFilter  </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">doFilter</span><span class="hljs-params">(HttpServletRequest req, HttpServletResponse res, FilterChain chain)</span> <span class="hljs-keyword">throws</span> IOException, ServletException &#123;<br>        <br>    &#125;<br></code></pre></td></tr></table></figure>
-
-<p>重写doFilter方法来使用过滤器  </p>
-<h2 id="解决编码乱码问题"><a href="#解决编码乱码问题" class="headerlink" title="解决编码乱码问题"></a>解决编码乱码问题</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">req.setCharacterEncoding(<span class="hljs-string">&quot;UTF-8&quot;</span>);<br>res.setCharacterEncoding(<span class="hljs-string">&quot;UTF-8&quot;</span>);<br></code></pre></td></tr></table></figure>
-
-<p>通过设置编码格式来解决传输过程中的乱码问题  </p>
-<h2 id="配置过滤地址"><a href="#配置过滤地址" class="headerlink" title="配置过滤地址"></a>配置过滤地址</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">url</span> <span class="hljs-operator">=</span> req.getRequestURL().toString();<br></code></pre></td></tr></table></figure>
-
-<p>获取url  </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">if</span>(!url.endsWith(<span class="hljs-string">&quot;login&quot;</span>) &amp;&amp; !url.endsWith(<span class="hljs-string">&quot;index.jsp&quot;</span>) &amp;&amp; !url.endsWith(<span class="hljs-string">&quot;/&quot;</span>))&#123;<br>            <span class="hljs-type">HttpSession</span> <span class="hljs-variable">session</span> <span class="hljs-operator">=</span> req.getSession();<br>            <span class="hljs-type">String</span> <span class="hljs-variable">user</span> <span class="hljs-operator">=</span> (String)session.getAttribute(<span class="hljs-string">&quot;user&quot;</span>);<br>            <span class="hljs-keyword">if</span>(user == <span class="hljs-literal">null</span>)&#123;<br>                req.setAttribute(<span class="hljs-string">&quot;message&quot;</span>,<span class="hljs-string">&quot;您尚未登录，请登录&quot;</span>);<br>                req.getRequestDispatcher(<span class="hljs-string">&quot;/login.jsp&quot;</span>).forward(req,res);<br>                <span class="hljs-keyword">return</span>;<br>            &#125;<br>        &#125;<br></code></pre></td></tr></table></figure>
-
-<p>通过判断url或者uri中包含的地址要素来决定是否过滤 </p>
-<p>过滤器获取的attribute应该要在<strong>会话域</strong>才行  </p>
-<p>所以在loginservlet中判断的时候需要把属性配置在会话域  </p>
+/*暴露路由*/
+export default router
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><br><span class="hljs-number">3.</span> ```js<br>   <span class="hljs-comment">/* 导入.vue组件 */</span><br>   <span class="hljs-keyword">import</span> Home <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../components/Home.vue&#x27;</span><br>   <span class="hljs-keyword">import</span> <span class="hljs-keyword">Add</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../components/Add.vue&#x27;</span><br>   <span class="hljs-keyword">import</span> List <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../components/List.vue&#x27;</span><br>   <span class="hljs-keyword">import</span> <span class="hljs-keyword">Update</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../components/Update.vue&#x27;</span><br>   <span class="hljs-keyword">import</span> ShowDetail <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../components/ShowDetail.vue&#x27;</span><br></code></pre></td></tr></table></figure>
+</code></pre>
+</li>
+<li><pre><code class="js">/*创建路由*/
+const router = createRouter(&#123;
+    history: createWebHashHistory(),
+    routes: [&#123;
+        //带参传递
+            path: &quot;/showDetail/:id/:language&quot;,
+            component: ShowDetail
+        &#125;,
+        &#123;
+            path: &quot;/&quot;,
+            component: Home
+        &#125;
+        
+    ]
+&#125;)
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><br><span class="hljs-number">5.</span> ```js<br>   <span class="hljs-comment">/*向外暴露路由*/</span><br>   <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> router<br>   				<br></code></pre></td></tr></table></figure>
+</code></pre>
+</li>
+<li><p>在main.js中导入路由对象并使用路由对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">//导入路由对象</span><br><span class="hljs-keyword">import</span> router <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./routers/router&#x27;</span><br><br><span class="hljs-comment">//使用路由对象</span><br><span class="hljs-keyword">const</span> app = <span class="hljs-title function_">createApp</span>(<span class="hljs-title class_">App</span>)<br>app.<span class="hljs-title function_">use</span>(router)<br>app.<span class="hljs-title function_">mount</span>(<span class="hljs-string">&#x27;#app&#x27;</span>)<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>在App.vue中使用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;router-link to=<span class="hljs-string">&quot;/showDetail/1/java&quot;</span>&gt;声明式路由路径传参&lt;/router-link&gt;				<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="编程式路由"><a href="#编程式路由" class="headerlink" title="编程式路由"></a>编程式路由</h2><ol>
+<li><p>需要导入useRouter</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> &#123; useRouter &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;vue-router&#x27;</span>;<br>  <span class="hljs-keyword">const</span> router = <span class="hljs-title function_">useRouter</span>()<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>配置方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> myPath = <span class="hljs-title function_">ref</span>(<span class="hljs-string">&quot;&quot;</span>)<br>  <span class="hljs-keyword">function</span> <span class="hljs-title function_">goMyPage</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-comment">//响应式数据需要使用.value</span><br>    router.<span class="hljs-title function_">push</span>(myPath.<span class="hljs-property">value</span>)<br>  &#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>使用方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;!-- 编程式路由 --&gt;<br>    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;goMyPage()&quot;</span>&gt;</span>go<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;myPath&quot;</span>&gt;</span></span><br></code></pre></td></tr></table></figure></li>
+</ol>
 
                 
               </div>
@@ -314,8 +340,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>关于filter的基本流程配置</div>
-      <div>http://xtpaistar.com/2024/05/30/关于filter的基本流程配置/</div>
+      <div></div>
+      <div>http://xtpaistar.com/2024/05/31/声明式路由和编程式路由/</div>
     </div>
     <div class="license-meta">
       
@@ -327,7 +353,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>May 30, 2024</div>
+          <div>May 31, 2024</div>
         </div>
       
       
@@ -359,18 +385,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/05/31/%E5%A3%B0%E6%98%8E%E5%BC%8F%E8%B7%AF%E7%94%B1%E5%92%8C%E7%BC%96%E7%A8%8B%E5%BC%8F%E8%B7%AF%E7%94%B1/" title="">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/05/29/%E5%85%B3%E4%BA%8E%E4%BD%BF%E7%94%A8servlet%E5%92%8Cjsp%E9%85%8D%E7%BD%AEjavaweb%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BD%93%E4%BC%9A/" title="关于使用servlet和jsp配置javaweb的一些体会">
-                        <span class="hidden-mobile">关于使用servlet和jsp配置javaweb的一些体会</span>
+                      <a href="/2024/05/30/%E5%85%B3%E4%BA%8Efilter%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B%E9%85%8D%E7%BD%AE/" title="关于filter的基本流程配置">
+                        <span class="hidden-mobile">关于filter的基本流程配置</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
