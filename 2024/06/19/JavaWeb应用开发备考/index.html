@@ -1,0 +1,776 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/logo.png">
+  <link rel="icon" href="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="xT">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="细节一切以到时候的考试文档为准，本备考方案从考试角度出发，致力于高效简洁的解决考试，与实际开发流程无关  1.在D盘目录下创建文件夹“学号”+姓名   到时候考试代码打包成压缩包放里面   2.根据考试文档创建数据库打开sqlyog ,默认密码root    如果没有给出数据库的查询文件，需要自行创建数据库右键创建数据库         接下来根据文档创建相应的表即可，字段长度可以都是默认的就行">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVAWeb期末考备考">
+<meta property="og:url" content="http://xtpaistar.com/2024/06/19/JavaWeb%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%A4%87%E8%80%83/index.html">
+<meta property="og:site_name" content="派小星&#39;s Home">
+<meta property="og:description" content="细节一切以到时候的考试文档为准，本备考方案从考试角度出发，致力于高效简洁的解决考试，与实际开发流程无关  1.在D盘目录下创建文件夹“学号”+姓名   到时候考试代码打包成压缩包放里面   2.根据考试文档创建数据库打开sqlyog ,默认密码root    如果没有给出数据库的查询文件，需要自行创建数据库右键创建数据库         接下来根据文档创建相应的表即可，字段长度可以都是默认的就行">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619132343785.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619132804823.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619132922293.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619133015496.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619133414775.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619134207353.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619134612869.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619134753651.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619134954568.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619135138780.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619135658220.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619135815496.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619135858696.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619135927667.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619140014471.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619140114346.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619140202339.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619140254068.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619135345794.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619135530596.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619140508831.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619185613463.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619185649921.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619141211164.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619141345430.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619141406883.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619141725244.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619141849429.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619142009455.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619142316845.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619142434142.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619142539009.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619142912074.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619144508162.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619143209640.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619143645310.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619143725579.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619143835520.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619144759049.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619145257050.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619145459215.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619150819293.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619145958901.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619150857207.png">
+<meta property="article:published_time" content="2024-06-19T10:58:51.885Z">
+<meta property="article:modified_time" content="2024-06-19T10:56:55.685Z">
+<meta property="article:author" content="xT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619132343785.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>JAVAWeb期末考备考 - 派小星&#39;s Home</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"xtpaistar.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>小派同学的日记</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>主页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>总览</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/bac.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="JAVAWeb期末考备考"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-06-19 18:58" pubdate>
+          June 19, 2024 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.7k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          15 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">JAVAWeb期末考备考</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p>细节一切以到时候的考试文档为准，本备考方案从考试角度出发，致力于高效简洁的解决考试，<strong>与实际开发流程无关</strong></p>
+</blockquote>
+<h2 id="1-在D盘目录下创建文件夹“学号”-姓名"><a href="#1-在D盘目录下创建文件夹“学号”-姓名" class="headerlink" title="1.在D盘目录下创建文件夹“学号”+姓名"></a>1.在D盘目录下创建文件夹<strong>“学号”+姓名</strong></h2><p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619132343785.png" srcset="/img/loading.gif" lazyload alt="image-20240619132343785">  </p>
+<p>到时候考试代码打包成压缩包放里面  </p>
+<h2 id="2-根据考试文档创建数据库"><a href="#2-根据考试文档创建数据库" class="headerlink" title="2.根据考试文档创建数据库"></a>2.根据考试文档创建数据库</h2><p>打开sqlyog ,默认密码root</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619132804823.png" srcset="/img/loading.gif" lazyload alt="image-20240619132804823">  </p>
+<h3 id="如果没有给出数据库的查询文件，需要自行创建数据库"><a href="#如果没有给出数据库的查询文件，需要自行创建数据库" class="headerlink" title="如果没有给出数据库的查询文件，需要自行创建数据库"></a>如果没有给出数据库的查询文件，需要自行创建数据库</h3><p>右键创建数据库  </p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619132922293.png" srcset="/img/loading.gif" lazyload alt="image-20240619132922293">  </p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619133015496.png" srcset="/img/loading.gif" lazyload alt="image-20240619133015496">  </p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><p>接下来根据文档创建相应的表即可，字段长度可以都是默认的就行  </p>
+<h3 id="如果给出了数据库查询文件，直接运行查询即可"><a href="#如果给出了数据库查询文件，直接运行查询即可" class="headerlink" title="如果给出了数据库查询文件，直接运行查询即可"></a>如果给出了数据库查询文件，直接运行查询即可</h3><p>将文件直接拖进去  </p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619133414775.png" srcset="/img/loading.gif" lazyload alt="image-20240619133414775"></p>
+<p>右键执行所有查询即可</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619134207353.png" srcset="/img/loading.gif" lazyload alt="image-20240619134207353"></p>
+<h2 id="3-根据题目要求搭建项目结构"><a href="#3-根据题目要求搭建项目结构" class="headerlink" title="3.根据题目要求搭建项目结构"></a>3.根据题目要求搭建项目结构</h2><h3 id="创建基础项目"><a href="#创建基础项目" class="headerlink" title="创建基础项目"></a>创建基础项目</h3><p>此处可以选择Location项目位置，选择name项目名称,下方JDK选择1.8</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619134612869.png" srcset="/img/loading.gif" lazyload alt="image-20240619134612869">  </p>
+<p>点击Create创建得到一个新项目  </p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619134753651.png" srcset="/img/loading.gif" lazyload alt="image-20240619134753651">  </p>
+<h3 id="添加为Web项目"><a href="#添加为Web项目" class="headerlink" title="添加为Web项目"></a>添加为Web项目</h3><p>单击选中project，双击键盘上的shift键打开搜索页面，搜索add，点击add framework support打开</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619134954568.png" srcset="/img/loading.gif" lazyload alt="image-20240619134954568"></p>
+<p>选择Web Application点击OK即可</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619135138780.png" srcset="/img/loading.gif" lazyload alt="image-20240619135138780"></p>
+<h3 id="添加TomCat依赖"><a href="#添加TomCat依赖" class="headerlink" title="添加TomCat依赖"></a>添加TomCat依赖</h3><p>点击右上角小齿轮找到project structure</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619135658220.png" srcset="/img/loading.gif" lazyload alt="image-20240619135658220">  </p>
+<p>在modoule页面下的dependencies下点击加号，并选择library</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619135815496.png" srcset="/img/loading.gif" lazyload alt="image-20240619135815496"></p>
+<p>点击Tomcat8，点击下方的蓝色按钮添加</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619135858696.png" srcset="/img/loading.gif" lazyload alt="image-20240619135858696">  </p>
+<p>最后点击右下角的ok</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619135927667.png" srcset="/img/loading.gif" lazyload alt="image-20240619135927667">  </p>
+<h3 id="配置TomCat运行"><a href="#配置TomCat运行" class="headerlink" title="配置TomCat运行"></a>配置TomCat运行</h3><p>在上方运行按钮的附近找到这个</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619140014471.png" srcset="/img/loading.gif" lazyload alt="image-20240619140014471">  </p>
+<p>进去后点击+号，并且找到Tomcat Local</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619140114346.png" srcset="/img/loading.gif" lazyload alt="image-20240619140114346">  </p>
+<p>选择Deployment，点击加号</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619140202339.png" srcset="/img/loading.gif" lazyload alt="image-20240619140202339">  </p>
+<p>将下方的地址删掉只保留一个&#x2F;号，然后点击右下角的蓝色按钮OK即可</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619140254068.png" srcset="/img/loading.gif" lazyload alt="image-20240619140254068">  </p>
+<h3 id="创建基础包结构"><a href="#创建基础包结构" class="headerlink" title="创建基础包结构"></a>创建基础包结构</h3><p>在src包下创建包的结构</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619135345794.png" srcset="/img/loading.gif" lazyload alt="image-20240619135345794"></p>
+<p>创建具体的包的结构  </p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619135530596.png" srcset="/img/loading.gif" lazyload alt="image-20240619135530596"></p>
+<p>web包的处理，删除web包下的index.jsp</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619140508831.png" srcset="/img/loading.gif" lazyload alt="image-20240619140508831"></p>
+<h3 id="导入题中给出的资源"><a href="#导入题中给出的资源" class="headerlink" title="导入题中给出的资源"></a>导入题中给出的资源</h3><p>连接池配置文件放在resources文件夹下面，可以避免识别不到文件的问题</p>
+<p>在project根目录下创建名为resources的文件夹</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619185613463.png" srcset="/img/loading.gif" lazyload alt="image-20240619185613463">    </p>
+<p>右键添加为resources文件夹</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619185649921.png" srcset="/img/loading.gif" lazyload alt="image-20240619185649921">    </p>
+<p>修改配置文件中的password和url</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619141211164.png" srcset="/img/loading.gif" lazyload alt="image-20240619141211164">  </p>
+<p><strong>将lib文件夹放在WEB-INF下面</strong>，这样能避免很多问题</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619141345430.png" srcset="/img/loading.gif" lazyload alt="image-20240619141345430"></p>
+<p>右键添加为依赖</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619141406883.png" srcset="/img/loading.gif" lazyload alt="image-20240619141406883">  </p>
+<p>如果使用	LomBok的话需要开启annotation,找到设置，点击搜索框搜索anno,点击enable annotation processing就可以开启</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619141725244.png" srcset="/img/loading.gif" lazyload alt="image-20240619141725244"></p>
+<p>JDBCUtils放到utils包下</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619141849429.png" srcset="/img/loading.gif" lazyload alt="image-20240619141849429"></p>
+<p>资源中给出的Web文件不选WEB-INF，其他都复制到idea的Web文件夹中</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619142009455.png" srcset="/img/loading.gif" lazyload alt="image-20240619142009455"></p>
+<h3 id="到此结束了项目的基础框架搭建"><a href="#到此结束了项目的基础框架搭建" class="headerlink" title="到此结束了项目的基础框架搭建"></a>到此结束了项目的基础框架搭建</h3><h2 id="4-进行实体类层domain的开发"><a href="#4-进行实体类层domain的开发" class="headerlink" title="4.进行实体类层domain的开发"></a>4.进行实体类层domain的开发</h2><p>右键数据库，点加号，找到mysql数据库</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619142316845.png" srcset="/img/loading.gif" lazyload alt="image-20240619142316845"></p>
+<p>在User写账号,在password写密码，在Database写exam,然后点蓝色按钮OK</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619142434142.png" srcset="/img/loading.gif" lazyload alt="image-20240619142434142">  </p>
+<p>展开两张表，对着参数进行实体类编写</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619142539009.png" srcset="/img/loading.gif" lazyload alt="image-20240619142539009"></p>
+<p>以此处的book和user为例，在domain下创建两个类Book和User,编写对象的成员变量，注意int要写成Integer来写,char的都写String,并且添加注解</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs less"><span class="hljs-variable">@Data</span><br><span class="hljs-variable">@AllArgsConstructor</span><br><span class="hljs-variable">@NoArgsConstructor</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619142912074.png" srcset="/img/loading.gif" lazyload alt="image-20240619142912074"></p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619144508162.png" srcset="/img/loading.gif" lazyload alt="image-20240619144508162">  </p>
+<h2 id="5-编写DAO层的方法"><a href="#5-编写DAO层的方法" class="headerlink" title="5.编写DAO层的方法"></a>5.编写DAO层的方法</h2><p>编写DAO接口和对应的impl实现类</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619143209640.png" srcset="/img/loading.gif" lazyload alt="image-20240619143209640"></p>
+<p>分析文档，大体需要对Book进行增删改查，那先开发BookDao，UserDao等用到了再写，接口中写以下方法</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619143645310.png" srcset="/img/loading.gif" lazyload alt="image-20240619143645310">  </p>
+<p>在实现类中一键实现接口中的方法</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619143725579.png" srcset="/img/loading.gif" lazyload alt="image-20240619143725579">  </p>
+<p>先获取JDBCTemplate，这一句也可以复制粘贴到UserDaoImpl中</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619143835520.png" srcset="/img/loading.gif" lazyload alt="image-20240619143835520">  </p>
+<p>编写对应的语句</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619144759049.png" srcset="/img/loading.gif" lazyload alt="image-20240619144759049"></p>
+<h2 id="6-编写service层中的方法"><a href="#6-编写service层中的方法" class="headerlink" title="6.编写service层中的方法"></a>6.编写service层中的方法</h2><p>与DAO层中类似，先不写user中的内容，但是要先创建好UserService,BookService中的内容就直接调用BookDao的就行</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619145257050.png" srcset="/img/loading.gif" lazyload alt="image-20240619145257050"></p>
+<h2 id="7-根据jsp页面编写web中的servlet"><a href="#7-根据jsp页面编写web中的servlet" class="headerlink" title="7.根据jsp页面编写web中的servlet"></a>7.根据jsp页面编写web中的servlet</h2><p>jsp页面中类似这样的地方的名字就是servlet的路径，再根据逻辑编写即可</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619145459215.png" srcset="/img/loading.gif" lazyload alt="image-20240619145459215"></p>
+<p>servlet基本框架如下，直接使用protected的service进行业务操作即可</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619150819293.png" srcset="/img/loading.gif" lazyload alt="image-20240619150819293"></p>
+<p>在jsp页面根据实际来修改jsp即可，图中的list是jsp页面接收到的变量名称，list是个列表，里面包含了book对象，通过遍历book对象(起了别名为p)的属性进行展示</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619145958901.png" srcset="/img/loading.gif" lazyload alt="image-20240619145958901"></p>
+<p>我们通过这段代码知道list页面需要接收list变量这一参数，所以findAllBook进行的业务应该是找到一个所有Book对象的列表，并放到变量list中，将list上传到request域中，通过请求转发的方式让list接收到变量list</p>
+<p><img src="https://raw.githubusercontent.com/PaiStra/getPhoto/main/img/image-20240619150857207.png" srcset="/img/loading.gif" lazyload alt="image-20240619150857207"></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>JAVAWeb期末考备考</div>
+      <div>http://xtpaistar.com/2024/06/19/JavaWeb应用开发备考/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>xT</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>June 19, 2024</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/06/03/%E6%97%A5%E8%AE%B002/" title="日记--2024/6/3">
+                        <span class="hidden-mobile">日记--2024/6/3</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>2024</span> <i class="iconfont icon-love"></i> <i class="iconfont icon-love"></i> <i class="iconfont icon-love"></i> <span>xt</span> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>
